@@ -1,11 +1,9 @@
 {
   "name": "debt_suggestion",
   "version": "0.0.1",
-  "description": "Calculator for figuring out the best way to tackle debt",
-  "main": "server.js",
   "scripts": {
     "test": "test",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -21,8 +19,12 @@
     "url": "https://github.com/iwnnay/debt_suggestion/issues"
   },
   "homepage": "https://github.com/iwnnay/debt_suggestion#readme",
-  "devDependencies": {
-    "express": "^4.16.4"
-  },
-  "dependencies": {}
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
+  }
 }
