@@ -1,0 +1,28 @@
+{
+  "name": "debt_suggestion",
+  "version": "0.0.1",
+  "description": "Calculator for figuring out the best way to tackle debt",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwnnay/debt_suggestion.git"
+  },
+  "keywords": [
+    "debt",
+    "calculator"
+  ],
+  "author": "Joe Imhoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwnnay/debt_suggestion/issues"
+  },
+  "homepage": "https://github.com/iwnnay/debt_suggestion#readme",
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
+  "dependencies": {}
+}
