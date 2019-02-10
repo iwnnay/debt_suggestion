@@ -3,7 +3,7 @@ const express = require('express')
 
 exports.start = () => {
   const PORT = process.env.PORT || 5000;
-  const HOST = process.env.HOST || '127.0.0.1';
+  const HOST = process.env.HOST || undefined;
 
   express()
     .use(express.static(path.join(__dirname, 'public')))
