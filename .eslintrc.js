@@ -1,11 +1,18 @@
 module.exports = {
-  parser: 'babel-eslint',
+  parser: 'typescript-eslint-parser',
   extends: 'airbnb',
   rules: {
-    'react/jsx-filename-extension': [1, { "extensions": [".js", ".jsx"] }]
+    'react/jsx-filename-extension': [1, { "extensions": ['.js', '.jsx', '.tsx'] }]
   },
   'env': {
     browser: true,
     node: true,
-  }
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.tsx'],
+      },
+    },
+  },
 };
