@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
+const path = require('path');
 const express = require('express');
 const server = require('./server.js');
 const config = require('./webpack.config');
@@ -10,5 +11,6 @@ const app = express();
 
 
 app.use(middleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 server.start(app);
