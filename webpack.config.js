@@ -4,7 +4,13 @@ const path = require('path');
 module.exports = {
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'awesome-typescript-loader' },
+        ],
+      },
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.(scss|css)$/,
@@ -17,18 +23,22 @@ module.exports = {
     ],
   },
 
-  entry: ['./src/index.tsx', 'webpack-hot-middleware/client'],
+  entry: ['./src/index.tsx'],
   output: {
     filename: 'calc.js',
     path: path.resolve(__dirname, 'public/javascripts'),
-    publicPath: path.resolve(__dirname, 'public'),
+    publicPath: '/',
   },
   mode: process.env.NODE_ENV || 'development',
   plugins: [new webpack.HotModuleReplacementPlugin()],
 
   resolve: { extensions: ['.ts', '.tsx', '.js', '.json'] },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    hot: true,
+    inline: true,
+    contentBase: '/',
     compress: true,
+    host: '0.0.0.0',
+    port: 3100,
   },
 };

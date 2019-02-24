@@ -1,0 +1,2 @@
+describe('main app file', () => {
+});
