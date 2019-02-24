@@ -12,8 +12,8 @@ const compiler = webpack(config);
 const app = express();
 
 
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(middleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
 app.use(hotMiddleware(compiler));
+app.use(express.static(path.join(__dirname, 'public')));
 
 server.start(app);

@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 const Calculator = () => (
   <Button>
-  This is a button, dude.
+    Click Me
   </Button>
 );
 
