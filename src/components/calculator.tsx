@@ -1,11 +1,13 @@
 import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import Disclaimer from './disclaimer';
+// import Button from '@material-ui/core/Button';
 
 const Calculator = () => (
-  <Button>
-    Click Me
-  </Button>
+  <Disclaimer />
+  // input form
+  // results
+  // facts area
 );
 
 export default hot(Calculator);
