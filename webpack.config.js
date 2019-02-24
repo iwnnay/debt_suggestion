@@ -4,7 +4,14 @@ const path = require('path');
 module.exports = {
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'react-hot-loader/webpack' },
+          { loader: 'awesome-typescript-loader' },
+        ],
+      },
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.(scss|css)$/,
