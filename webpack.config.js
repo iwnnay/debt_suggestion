@@ -8,7 +8,6 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
-          { loader: 'react-hot-loader/webpack' },
           { loader: 'awesome-typescript-loader' },
         ],
       },
@@ -24,7 +23,7 @@ module.exports = {
     ],
   },
 
-  entry: ['./src/index.tsx', 'webpack-hot-middleware/client'],
+  entry: ['./src/index.tsx'],
   output: {
     filename: 'calc.js',
     path: path.resolve(__dirname, 'public/javascripts'),
@@ -35,7 +34,11 @@ module.exports = {
 
   resolve: { extensions: ['.ts', '.tsx', '.js', '.json'] },
   devServer: {
+    hot: true,
+    inline: true,
     contentBase: path.join(__dirname, 'public'),
     compress: true,
+    host: '0.0.0.0',
+    port: 3100,
   },
 };
