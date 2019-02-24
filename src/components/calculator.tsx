@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 const Calculator = () => (
   <Button>
-    Hello World!! YAY!!
+    Hello World!! YAY!!Duty
   </Button>
 );
 

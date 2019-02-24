@@ -15,5 +15,5 @@ const render = () => {
 render();
 
 if (module.hot) {
-  module.hot.accept('./calculator', () => { render(); });
+  module.hot.accept('./components/calculator', () => { render(); });
 }
