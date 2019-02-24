@@ -1,10 +1,11 @@
+import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
 
 const Calculator = () => (
   <Button>
-    Click It!
+  This is a button, dude.
   </Button>
 );
 
-export default Calculator;
+export default hot(Calculator);

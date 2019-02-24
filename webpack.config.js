@@ -27,7 +27,7 @@ module.exports = {
   output: {
     filename: 'calc.js',
     path: path.resolve(__dirname, 'public/javascripts'),
-    publicPath: path.resolve(__dirname, 'public'),
+    publicPath: '/',
   },
   mode: process.env.NODE_ENV || 'development',
   plugins: [new webpack.HotModuleReplacementPlugin()],
@@ -36,7 +36,7 @@ module.exports = {
   devServer: {
     hot: true,
     inline: true,
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: '/',
     compress: true,
     host: '0.0.0.0',
     port: 3100,
