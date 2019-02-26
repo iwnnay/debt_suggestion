@@ -753,6 +753,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-test-renderer@^16.8.1":
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.8.1.tgz#96f3ce45a3a41c94eca532a99103dd3042c9d055"
+  integrity sha512-8gU69ELfJGxzVWVYj4MTtuHxz9nO+d175XeQ1XrXXxesUBsB4KK6OCfzVhEX6leZWWBDVtMJXp/rUjhClzL7gw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^2.0.8":
   version "2.0.16"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.16.tgz#2dcb9e396ab385ee19c4af1c9caa469a14cd042f"
@@ -8167,7 +8174,7 @@ react-hot-loader@^4.7.1:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3:
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
@@ -8176,6 +8183,16 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-test-renderer@^16.8.3:
+  version "16.8.3"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.3.tgz#230006af264cc46aeef94392e04747c21839e05e"
+  integrity sha512-rjJGYebduKNZH0k1bUivVrRLX04JfIQ0FKJLPK10TAb06XWhfi4gTobooF9K/DEFNW98iGac3OSxkfIJUN9Mdg==
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    react-is "^16.8.3"
+    scheduler "^0.13.3"
 
 react-transition-group@^2.2.1:
   version "2.5.3"

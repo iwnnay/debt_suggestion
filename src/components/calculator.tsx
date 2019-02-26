@@ -4,10 +4,12 @@ import Disclaimer from './disclaimer';
 // import Button from '@material-ui/core/Button';
 
 const Calculator = () => (
-  <Disclaimer />
-  // input form
-  // results
-  // facts area
+  <main>
+    <Disclaimer />
+    // input form
+    // results
+    // facts area
+  </main>
 );
 
 export default hot(Calculator);
