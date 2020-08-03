@@ -1,0 +1,38 @@
+#root {
+  margin: 10px 10%;
+  min-width: 800px;
+  width: 80%;
+}
+
+.App {
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border: 0px 1px solid darkgray;
+  padding: 0 20px;
+}
+
+#disclaimer {
+  border-bottom: 1px solid darkgray;
+  padding-bottom: 5px;
+}
+
+#disclaimer-text {
+  color: darkblue;
+  font-size: .75em;
+
+  span {
+    font-weight: bold;
+    padding-right: 10px;
+  }
+}
+
+#instructions {
+  span {
+    font-weight: bold;
+    padding-right: 1em;
+  }
+}
+
+#addForm {
+  margin-top: 20px;
+}
