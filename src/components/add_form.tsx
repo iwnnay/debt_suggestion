@@ -1,16 +1,15 @@
 import * as React from "react";
-
-//const Input = (props) => {
-//}
+import DebtItem from './debt_item'
 
 export default class AddForm extends React.Component {
   render() {
     return (
       <div id="addForm">
-        <label htmlFor="account_name">
-          Name:
-          <input name="account_name" type="text" />
-        </label>
+        <ul>
+          <DebtItem />
+        </ul>
+
+        <button>Calculate</button>
       </div>
     );
   }
