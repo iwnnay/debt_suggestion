@@ -1,3 +1,7 @@
+$primary-color: navy;
+$secondary-color: darkgreen;
+$tertiary-color: lightgray;
+
 #root {
   margin: 10px 10%;
   min-width: 800px;
@@ -5,19 +9,19 @@
 }
 
 .App {
-  border-right: 1px solid gray;
-  border-left: 1px solid gray;
-  border: 0px 1px solid darkgray;
+  border-right: 1px solid $tertiary-color;
+  border-left: 1px solid $tertiary-color;
+  border: 0px 1px solid $tertiary-color;
   padding: 0 20px;
 }
 
 #disclaimer {
-  border-bottom: 1px solid darkgray;
-  padding-bottom: 5px;
+  border-bottom: 1px solid $tertiary-color;
+            padding-bottom: 5px;
 }
 
 #disclaimer-text {
-  color: darkblue;
+  color: $primary-color;
   font-size: .75em;
 
   span {
