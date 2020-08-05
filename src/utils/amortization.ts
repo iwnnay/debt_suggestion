@@ -1,15 +1,19 @@
+import { moment } from 'moment';
+
 export default class Amortization {
-    constructor (payment: integer, debts: Debts) {
+    constructor (payment: integer, debtStore: Debts) {
+        const debts = Object.assign({}, debtStore.data.debts);
         this.payment = payment;
-        this.debts = debts;
+        this.currentMonth = moment();
         this.strategies = {
-            snowball: {},
-            smartball: {},
-            noball: {},
+            snowball: { debts },
+            smartball: { debts },
+            noball: { debts },
         }
     }
 
     runStrategies() {
+        this.currentMonth = this.currentMonth.add(1, 'month');
         this.calcSnowball();
         this.calcSmartball();
         this.calcNoball();
@@ -17,7 +21,11 @@ export default class Amortization {
 
     calcSnowball(){}
     calcSmartball(){}
-    calcNoball(){}
+    calcNoball() {
+        // need to go through month by month for each debt
+        // apply the same mount
+        // if the total amount is zero or less then we're doen
+    }
 
-    get noBall() { this.strategies.noball; }
+    get noBall() { return this.strategies.noball; }
 }
