@@ -1,0 +1,8 @@
+{
+  "name": "Debt Suggestion Calculator",
+  "description": "A Calculator to figure out the best way to pay down debt",
+  "repository": "git@github.com:iwnnay/debt_suggestion.git",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "react", "debt"],
+  "image": "heroku/nodejs"
+}
