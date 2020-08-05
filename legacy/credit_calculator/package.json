@@ -1,0 +1,50 @@
+{
+  "name": "replace",
+  "version": "0.0.1",
+  "description": "replace",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --watch",
+    "build": "webpack",
+    "prepare": "webpack"
+  },
+  "files": [ "dist/*" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwnnay/base_webpack_react_app.git"
+  },
+  "keywords": [
+    "base",
+    "webpack",
+    "react",
+    "babel"
+  ],
+  "author": "Joe Imhoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwnnay/base_webpack_react_app/issues"
+  },
+  "homepage": "https://github.com/iwnnay/base_webpack_react_app#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "file-loader": "^3.0.1",
+    "jest": "^23.6.0",
+    "punycode": "^2.1.1",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {}
+}
