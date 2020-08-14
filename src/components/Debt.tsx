@@ -1,18 +1,18 @@
 import * as React from "react";
 
-type Props = {}
+type Props = {};
 
 type State = {
-  active: boolean,
-}
+  active: boolean;
+};
 
-export default class LineItem extends React.Component<Props, State> {
+export default class Debt extends React.Component {
   readonly state: State = {
-    active: false,
-  }
+    active: false
+  };
 
   render() {
-    // if (this.state.active) { 
+    // if (this.state.active) {
     if (true) {
       return (
         <li>
@@ -30,7 +30,7 @@ export default class LineItem extends React.Component<Props, State> {
     } else {
       return (
         <li>
-          <button className="add-line-item">+</button>
+          <button className="add-debt">+</button>
         </li>
       );
     }

@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.scss";
-import Calculator from "./components/calculator";
+import Disclaimer from "components/Disclaimer";
+import Ledger from "components/Ledger";
 
 function App() {
   return (
-    <div className="App">
-      <Calculator />
-    </div>
+    <main className="App">
+      <Disclaimer />
+      <Ledger />
+      // results // Amoritization Areas
+    </main>
   );
 }
 
