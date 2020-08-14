@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.44",
+    "markserv": "^1.17.4",
     "prettier": "^2.0.5"
   }
 }
