@@ -1,5 +1,5 @@
-import * as React from "react";
-import Debt from "components/Debt";
+import * as React from 'react';
+import Debt from 'components/Debt';
 
 export default class Account extends React.Component {
   render() {

@@ -1,12 +1,13 @@
-import * as React from "react";
-import AccountComponent from "./Account";
+import * as React from 'react';
+import Account from 'components/Account';
+import Wallet from 'components/Wallet';
 // import Button from '@material-ui/core/Button';
 
 const Ledger = () => (
   <div>
-    // over payment information
+    <Wallet />
     <ul id="ledger">
-      <AccountComponent />
+      <Account />
     </ul>
   </div>
 );
