@@ -1,5 +1,5 @@
 import * as React from "react";
-import Debt from "./Debt";
+import Debt from "components/Debt";
 
 export default class Account extends React.Component {
   render() {
@@ -14,7 +14,6 @@ export default class Account extends React.Component {
           General APR:
           <input name="apr" type="text" />
         </label>
-
         <ul>
           <Debt />
         </ul>
