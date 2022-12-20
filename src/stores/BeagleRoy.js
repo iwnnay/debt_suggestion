@@ -13,8 +13,7 @@ class DataPipeline {
   }
 
   then(data) {
-    const nextMethod =
-      'on' + this.actionName.charAt(0).toUpperCase() + this.actionName.slice(1);
+    const nextMethod = 'on' + this.actionName.charAt(0).toUpperCase() + this.actionName.slice(1);
 
     Object.keys(data).forEach(key => {
       this.store.beagleRoy.ammend(key, data[key]);
@@ -27,11 +26,11 @@ class DataPipeline {
     });
   }
 
-  // I have no idea how to write meanwhile just yet
   async meanwhile(action) {
+    const data = this.data;
     return new Promise(async (resolve, fail) => {
       try {
-        await resolve(action());
+        await resolve(action(data));
       } catch (e) {
         fail(e);
       }
@@ -64,7 +63,7 @@ export const create = (klass, defaultData) => {
     defaultData,
     connections: [],
     keys: Object.keys(defaultData),
-    ammend: function(key, value) {
+    ammend: function (key, value) {
       if (!this.keys.includes(key)) {
         throw new Error(
           `The store ${this.storeName} doesn't have a key of ${key}. ` +
