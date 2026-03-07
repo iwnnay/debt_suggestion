@@ -29,6 +29,16 @@
         onStrategyChange,
         onExtraPaymentChange
     }: Props = $props();
+
+    function handleStrategyChange(event: Event): void {
+        const target = event.currentTarget as HTMLSelectElement;
+        onStrategyChange(target.value as Strategy);
+    }
+
+    function handleExtraPaymentChange(event: Event): void {
+        const target = event.currentTarget as HTMLInputElement;
+        onExtraPaymentChange(Number(target.value));
+    }
 </script>
 
 <div class="grid">
@@ -40,8 +50,7 @@
                 <span>Strategy</span>
                 <select
                         bind:value={strategy}
-                        onchange={(e) =>
-						onStrategyChange((e.currentTarget as HTMLSelectElement).value as Strategy)}
+                        onchange={handleStrategyChange}
                 >
                     <option value="avalanche">Avalanche (highest APR first)</option>
                     <option value="snowball">Snowball (smallest balance first)</option>
@@ -55,8 +64,7 @@
                         min="0"
                         step="0.01"
                         bind:value={extraPayment}
-                        oninput={(e) =>
-						onExtraPaymentChange(Number((e.currentTarget as HTMLInputElement).value))}
+                        oninput={handleExtraPaymentChange}
                 />
             </label>
         </div>

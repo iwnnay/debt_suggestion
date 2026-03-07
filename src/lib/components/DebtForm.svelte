@@ -8,6 +8,15 @@
     };
 
     let { form, onAdd, onTypeChange }: Props = $props();
+
+    function handleTypeChange(event: Event): void {
+        const target = event.currentTarget as HTMLSelectElement;
+        onTypeChange(target.value as DebtType);
+    }
+
+    function handleAddClick(): void {
+        onAdd();
+    }
 </script>
 
 <div class="card">
@@ -18,7 +27,7 @@
             <span>Type</span>
             <select
                     bind:value={form.type}
-                    onchange={(e) => onTypeChange((e.currentTarget as HTMLSelectElement).value as DebtType)}
+                    onchange={handleTypeChange}
             >
                 <option value="credit-card">Credit Card</option>
                 <option value="loan">Loan</option>
@@ -53,7 +62,7 @@
         {/if}
     </div>
 
-    <button class="primary" onclick={onAdd}>Add debt</button>
+    <button class="primary" onclick={handleAddClick}>Add debt</button>
 </div>
 
 <style>

@@ -8,6 +8,10 @@
     };
 
     let { debts, onRemove }: Props = $props();
+
+    function handleRemoveClick(id: string): void {
+        onRemove(id);
+    }
 </script>
 
 <section class="card">
@@ -39,7 +43,7 @@
                         <td>{percent(debt.apr)}</td>
                         <td>{debt.type === 'credit-card' && debt.promoEnd ? debt.promoEnd : '—'}</td>
                         <td>
-                            <button class="danger" onclick={() => onRemove(debt.id)}>Remove</button>
+                            <button class="danger" onclick={() => handleRemoveClick(debt.id)}>Remove</button>
                         </td>
                     </tr>
                 {/each}
