@@ -9,8 +9,8 @@
     const today = new Date();
     const defaultPromoEnd = createDefaultPromoEnd(today);
 
-    let strategy: Strategy = 'avalanche';
-    let extraPayment = 200;
+    let strategy = $state<Strategy>('avalanche');
+    let extraPayment = $state(200);
 
     let debts: DebtInput[] = [
         {
@@ -32,7 +32,7 @@
         }
     ];
 
-    let form: DebtInput = createBlankDebt('credit-card', today);
+    let form = $state<DebtInput>(createBlankDebt('credit-card', today));
 
     function addDebt(): void {
         if (!form.name.trim()) return;
